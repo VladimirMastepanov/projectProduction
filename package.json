@@ -1,0 +1,40 @@
+{
+  "name": "projectproduction",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx webpack serve --env port=3000",
+    "build:prod": "npx webpack --env mode=production",
+    "build:dev": "npx webpack --env mode=development",
+    "clean": "rm -rf node_modules/.cache dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.9.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/webpack": "^5.28.5",
+    "@types/webpack-dev-server": "^4.7.2",
+    "css-loader": "6.8.1",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.81.0",
+    "sass-loader": "^16.0.3",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.0.1"
+  }
+}
