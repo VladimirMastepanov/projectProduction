@@ -1,9 +1,12 @@
+import React from "react";
 import './styles/index.scss';
-import { Link } from "react-router-dom";
 import { useTheme } from '01_app/providers/ThemeProvider';
 import { classNames } from '06_shared/lib/classNames/classNames';
 import { AppRouter } from './providers/router';
 import { Navbar } from '03_widgets/Navbar';
+import { Sidebar } from '03_widgets/Sidebar';
+import { Suspense } from 'react';
+
 
 
 const App = () => {
@@ -13,10 +16,17 @@ const App = () => {
   return (
     <div className={classNames('app', {}, [theme])}>
 
-      <Navbar />
-      <AppRouter />
+      <Suspense fallback=''>
 
-    </div>
+        <Navbar />
+        <div className='content-page'>
+          <Sidebar />
+          <AppRouter />
+        </div>
+
+      </Suspense>
+
+    </div >
   )
 };
 

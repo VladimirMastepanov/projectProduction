@@ -1,3 +1,4 @@
+import React from "react";
 import { classNames } from "06_shared/lib/classNames/classNames";
 import cls from './Button.module.scss';
 import { ButtonHTMLAttributes, PropsWithChildren } from "react";

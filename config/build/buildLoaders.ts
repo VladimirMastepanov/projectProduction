@@ -6,10 +6,42 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
 
 
 
+  // const svgLoader = {
+  //   test: /\.svg$/i,
+  //   issuer: /\.[jt]sx?$/,
+  //   use: ['@svgr/webpack'],
+  // };
   const svgLoader = {
-    test: /\.svg$/i,
-    issuer: /\.[jt]sx?$/,
+    test: /\.svg$/,
     use: ['@svgr/webpack'],
+  };
+
+  // const babelLoader = {
+  //   test: /\.(js|jsx)$/,
+  //   exclude: /node_modules/,
+  //   use: {
+  //     loader: "babel-loader",
+  //     options: {
+  //       presets: [
+  //         '@babel/preset-env',
+  //         '@babel/preset-react',
+  //       ]
+  //     }
+  //   }
+  // }
+  const babelLoader = {
+    test: /\.(js|jsx|ts|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: [
+          '@babel/preset-env',
+          '@babel/preset-react',
+          '@babel/preset-typescript'
+        ]
+      }
+    }
   };
 
   const cssLoader = {
@@ -36,10 +68,15 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
   };
 
   //Если не использовать typeScript - нужен babel-loader
+  // const typescriptLoader = {
+  //   test: /\.tsx?$/,
+  //   use: 'ts-loader',
+  //   exclude: /node_modules/,
+  // };
   const typescriptLoader = {
-    test: /\.tsx?$/,
-    use: 'ts-loader',
+    test: /\.(ts|tsx)$/,
     exclude: /node_modules/,
+    use: 'babel-loader'
   };
 
   const fileLoader = {
@@ -54,9 +91,10 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
 
 
   return [
+    fileLoader,
+    svgLoader,
+    babelLoader,
     typescriptLoader,
     cssLoader,
-    svgLoader,
-    fileLoader,
   ];
 };

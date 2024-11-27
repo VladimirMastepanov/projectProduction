@@ -12,7 +12,12 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"]
+      "*": ["./src/*"],
+      "*.svg": ["./src/*"],
+      // "06_shared/*": ["src/06_shared/*"],
+      // "01_app/*": ["src/01_app/*"],
+      // "02_pages/*": ["src/02_pages/*"],
+      // "03_widgets/*": ["src/03_widgets/*"]
     },
     // allow... позволяет использовать дефолтные импорты, даже если библиотека такого не имеет
     "allowSyntheticDefaultImports": true,
@@ -20,7 +25,9 @@
     //common js как с обычными пакетами с помощью import
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "strict": true
+    "strict": true,
+    "noEmit": true,
+    "typeRoots": ["./node_modules/@types", "./src"]
   },
   "ts-node": {
     "compilerOptions": {

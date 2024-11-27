@@ -13,6 +13,11 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "@babel/preset-typescript": "^7.26.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^22.9.1",
     "@types/react": "^18.3.12",
@@ -20,10 +25,15 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/webpack": "^5.28.5",
     "@types/webpack-dev-server": "^4.7.2",
+    "@types/webpack-env": "^1.18.5",
+    "babel-loader": "^9.2.1",
+    "babel-plugin-module-resolver": "^5.0.2",
     "css-loader": "6.8.1",
     "file-loader": "^6.2.0",
+    "fork-ts-checker-webpack-plugin": "^9.0.2",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
+    "react-refresh": "^0.14.2",
     "sass": "^1.81.0",
     "sass-loader": "^16.0.3",
     "style-loader": "^4.0.0",
@@ -35,8 +45,12 @@
     "webpack-dev-server": "^5.1.0"
   },
   "dependencies": {
+    "i18next": "^24.0.0",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-http-backend": "^3.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-i18next": "^15.1.1",
     "react-router-dom": "^7.0.1"
   }
 }

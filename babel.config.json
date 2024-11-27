@@ -1,0 +1,20 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": "defaults"
+    }],
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "06_shared": "./src/06_shared",
+        "01_app": "./src/01_app",
+        "02_pages": "./src/02_pages",
+        "03_widgets": "./src/03_widgets"
+      }
+    }]
+  ]
+}
