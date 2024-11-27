@@ -1,10 +1,10 @@
 import React from "react";
 import { classNames } from "06_shared/lib/classNames/classNames";
-import cls from './Button.module.scss';
+import cls from "./Button.module.scss";
 import { ButtonHTMLAttributes, PropsWithChildren } from "react";
 
 export enum ThemeButton {
-  CLEAR = 'clear',
+  CLEAR = "clear",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -13,8 +13,12 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = (props: PropsWithChildren<ButtonProps>) => {
-
-  const { className = '', children, theme = ThemeButton.CLEAR, ...otherProps } = props;
+  const {
+    className = "",
+    children,
+    theme = ThemeButton.CLEAR,
+    ...otherProps
+  } = props;
 
   return (
     <button
@@ -23,5 +27,5 @@ export const Button = (props: PropsWithChildren<ButtonProps>) => {
     >
       {children}
     </button>
-  )
-}
+  );
+};

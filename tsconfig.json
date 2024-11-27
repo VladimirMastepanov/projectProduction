@@ -12,16 +12,12 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"],
-      "*.svg": ["./src/*"],
-      // "06_shared/*": ["src/06_shared/*"],
-      // "01_app/*": ["src/01_app/*"],
-      // "02_pages/*": ["src/02_pages/*"],
-      // "03_widgets/*": ["src/03_widgets/*"]
+      "*": ["./src/*"]
+      // "*.svg": ["./src/*"],
     },
     // allow... позволяет использовать дефолтные импорты, даже если библиотека такого не имеет
     "allowSyntheticDefaultImports": true,
-    // esModuleInterop позволяет работать с пакетами, которые используют 
+    // esModuleInterop позволяет работать с пакетами, которые используют
     //common js как с обычными пакетами с помощью import
     "esModuleInterop": true,
     "resolveJsonModule": true,
