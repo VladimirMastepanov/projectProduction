@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from '01_app/providers/ThemeProvider';
 
 import '06_shared/config/i18n/i18n';
+import { ErrorBoundary } from '01_app/providers/ErrorBoundary';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -15,8 +16,10 @@ const root = createRoot(rootElement);
 
 root.render(
   <BrowserRouter>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </ErrorBoundary>
   </BrowserRouter>,
 );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles/index.scss';
 import { useTheme } from '01_app/providers/ThemeProvider';
 import { classNames } from '06_shared/lib/classNames/classNames';
@@ -9,6 +9,10 @@ import { Suspense } from 'react';
 
 const App = () => {
   const { theme } = useTheme();
+
+  // useEffect(() => {
+  //   throw new Error();
+  // }, []);
 
   return (
     <div className={classNames('app', {}, [theme])}>

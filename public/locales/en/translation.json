@@ -5,5 +5,9 @@
   "about": "about",
   "aboutPage": "About Page",
   "mainPage": "Main",
-  "lang": "English"
+  "lang": "English",
+  "notFoundPage": "Page Not Found",
+  "something went wrong": "Something went wrong.",
+  "reload page": "Reload page",
+  "throw error": "throw error"
 }
