@@ -1,6 +1,6 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import webpack from "webpack";
-import { BuildOptions } from "./types/config";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import webpack from 'webpack';
+import { BuildOptions } from './types/config';
 
 export const buildLoaders = ({
   isDev,
@@ -12,7 +12,7 @@ export const buildLoaders = ({
   // };
   const svgLoader = {
     test: /\.svg$/,
-    use: ["@svgr/webpack"],
+    use: ['@svgr/webpack'],
   };
 
   // const babelLoader = {
@@ -32,12 +32,12 @@ export const buildLoaders = ({
     test: /\.(js|jsx|ts|tsx)$/,
     exclude: /node_modules/,
     use: {
-      loader: "babel-loader",
+      loader: 'babel-loader',
       options: {
         presets: [
-          "@babel/preset-env",
-          "@babel/preset-react",
-          "@babel/preset-typescript",
+          '@babel/preset-env',
+          '@babel/preset-react',
+          '@babel/preset-typescript',
         ],
       },
     },
@@ -47,22 +47,22 @@ export const buildLoaders = ({
     test: /\.s[ac]ss$/i,
     use: [
       // Creates `style` nodes from JS strings
-      isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+      isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       // Translates CSS into CommonJS
       {
-        loader: "css-loader",
+        loader: 'css-loader',
         options: {
           modules: {
-            auto: (resPath: string) => Boolean(resPath.includes(".module.")),
+            auto: (resPath: string) => Boolean(resPath.includes('.module.')),
             localIdentName: isDev
-              ? "[path][name]__[local]--[hash:base64:5]"
-              : "[hash:base64:8]",
-            exportLocalsConvention: "camelCase",
+              ? '[path][name]__[local]--[hash:base64:5]'
+              : '[hash:base64:8]',
+            exportLocalsConvention: 'camelCase',
           },
         },
       },
       // Compiles Sass to CSS
-      "sass-loader",
+      'sass-loader',
     ],
   };
 
@@ -75,14 +75,14 @@ export const buildLoaders = ({
   const typescriptLoader = {
     test: /\.(ts|tsx)$/,
     exclude: /node_modules/,
-    use: "babel-loader",
+    use: 'babel-loader',
   };
 
   const fileLoader = {
     test: /\.(png|jpe?g|gif|woff2|woff)$/i,
     use: [
       {
-        loader: "file-loader",
+        loader: 'file-loader',
       },
     ],
   };

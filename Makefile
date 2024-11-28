@@ -6,5 +6,9 @@ dev:
 			npm run build:dev
 lint:
 			npm run eslint
-prettier:
+lintfix:
+			npx eslint . --fix
+pre:
 			npx prettier . --write
+test:
+			npm run test

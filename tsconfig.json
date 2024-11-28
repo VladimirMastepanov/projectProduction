@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["jest", "node"],
     "outDir": "./dist/",
     //подсвечивает места где не указан тип
     "noImplicitAny": true,
