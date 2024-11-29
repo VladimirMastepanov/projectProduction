@@ -1,6 +1,6 @@
 import React from 'react';
 import { classNames } from '06_shared/lib/classNames/classNames';
-import { Button, ThemeButton } from '06_shared/ui/Button/Button/Button';
+import { Button, ThemeButton } from '06_shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 
 interface LangSwitcherProps {

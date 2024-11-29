@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './styles/index.scss';
 import { useTheme } from '01_app/providers/ThemeProvider';
 import { classNames } from '06_shared/lib/classNames/classNames';

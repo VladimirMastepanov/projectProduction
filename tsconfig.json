@@ -5,6 +5,7 @@
     //подсвечивает места где не указан тип
     "noImplicitAny": true,
     "module": "ESNext",
+    // "module": "CommonJS", 
     //компелируется в более старую версию чтобы болше браузеров поддерживало
     "target": "es5",
     "jsx": "react-jsx",
@@ -30,5 +31,7 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": ["src/**/*", "config", "webpack.config.ts", "eslint.config.mjs"],
+  "exclude": ["node_modules", "dist", ".vscode"]
 }

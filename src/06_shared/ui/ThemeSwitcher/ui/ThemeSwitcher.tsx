@@ -3,7 +3,7 @@ import { classNames } from '06_shared/lib/classNames/classNames';
 import { Theme, useTheme } from '01_app/providers/ThemeProvider';
 import DarkIcon from '06_shared/assets/icons/DarkIcon.svg';
 import LightIcon from '06_shared/assets/icons/LightIcon.svg';
-import { Button, ThemeButton } from '06_shared/ui/Button/Button/Button';
+import { Button, ThemeButton } from '06_shared/ui/Button/Button';
 
 interface ThemeSwitcherProps {
   className?: string;
