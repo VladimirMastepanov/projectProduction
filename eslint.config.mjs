@@ -54,6 +54,7 @@ export default [
     rules: {
       'i18next/no-literal-string': 'off', // Отключаем проверку строковых литералов в тестах
       'import/no-unresolved': 'off',
+      code: 100,
     },
   },
 ];

@@ -1,10 +1,6 @@
 name: plinting, testing, building
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: 
-  push: 
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
 jobs:
   pipeline:
     runs-on: ubuntu-latest
