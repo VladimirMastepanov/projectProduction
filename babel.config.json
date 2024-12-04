@@ -18,7 +18,7 @@
     [
       "module-resolver",
       {
-        "root": ["./src"],
+        "root": ["./src"]
         // "alias": {
         //   "01_app": "./src/01_app",
         //   "02_pages": "./src/02_pages",

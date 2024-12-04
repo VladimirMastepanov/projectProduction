@@ -3,36 +3,36 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type { Config } from 'jest';
-import path from 'path';
+import type { Config } from "jest";
+import path from "path";
 
 const config: Config = {
   clearMocks: true,
   // testEnvironment: 'jsdom',
-  testEnvironment: 'jest-environment-jsdom',
-  coveragePathIgnorePatterns: ['/node_modules/'],
-  moduleDirectories: ['node_modules'],
+  testEnvironment: "jest-environment-jsdom",
+  coveragePathIgnorePatterns: ["/node_modules/"],
+  moduleDirectories: ["node_modules"],
   moduleFileExtensions: [
-    'js',
-    'mjs',
-    'cjs',
-    'jsx',
-    'ts',
-    'tsx',
-    'json',
-    'node',
+    "js",
+    "mjs",
+    "cjs",
+    "jsx",
+    "ts",
+    "tsx",
+    "json",
+    "node",
   ],
-  rootDir: '../../',
+  rootDir: "../../",
 
-  testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).[tj]s?(x)'],
-  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
-  setupFilesAfterEnv: ['<rootDir>config/jest/setupTest.ts'],
+  testMatch: ["<rootDir>/src/**/*(*.)@(spec|test).[tj]s?(x)"],
+  testPathIgnorePatterns: ["/node_modules/", "/dist/"],
+  setupFilesAfterEnv: ["<rootDir>config/jest/setupTest.ts"],
   moduleNameMapper: {
     // '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
     //   '<rootDir>/__mocks__/fileMock.js',
     // '\\.module\\.scss$': 'identity-obj-proxy',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+    "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
   },
   // transform: {
   //   '^.+\\.(ts|tsx)$': 'ts-jest', // обработка TypeScript файлов с помощью ts-jest

@@ -1,6 +1,6 @@
-import { Loader } from '06_shared/ui/Loader/Loader';
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { Loader } from "06_shared/ui/Loader/Loader";
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 const MainPage = () => {
   const { t } = useTranslation();
@@ -8,7 +8,7 @@ const MainPage = () => {
   return (
     <div>
       <Loader />
-      {t('mainPage')}
+      {t("mainPage")}
     </div>
   );
 };
