@@ -1,10 +1,12 @@
-.app.dark {
-  --bg-color: #55555e;
-  --inverted-bg-color: #ffffff;
+:global {
+  .app.dark {
+    --bg-color: #55555e;
+    --inverted-bg-color: #ffffff;
 
-  --primary-color: #c5d2b4bb;
-  --secondary-color: #b8df9c;
+    --primary-color: #c5d2b4bb;
+    --secondary-color: #b8df9c;
 
-  --inverted-primary-color: #4b4b4bbb;
-  --inverted-secondary-color: #3c3d3b;
+    --inverted-primary-color: #4b4b4bbb;
+    --inverted-secondary-color: #3c3d3b;
+  }
 }

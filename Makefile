@@ -11,4 +11,6 @@ lintfix:
 pre:
 			npx prettier . --write
 test:
-			npm run test
+			npm run test:unit
+book:
+			npm run storybook

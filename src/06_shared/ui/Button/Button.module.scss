@@ -9,3 +9,12 @@
   background: none;
   outline: none;
 }
+
+.outline {
+  padding: 10px 15px;
+  border: 1px solid var(--primary-color);
+  // border: 1px solid #c5d2b4bb;
+  color: var(--primary-color);
+  // color: #c5d2b4bb;
+  background: none;
+}

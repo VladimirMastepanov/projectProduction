@@ -19,14 +19,14 @@
       "module-resolver",
       {
         "root": ["./src"],
-        "alias": {
-          "01_app": "./src/01_app",
-          "02_pages": "./src/02_pages",
-          "03_widgets": "./src/03_widgets",
-          "04_features": "./src/04_features",
-          "05_entities": "./src/05_entities",
-          "06_shared": "./src/06_shared"
-        }
+        // "alias": {
+        //   "01_app": "./src/01_app",
+        //   "02_pages": "./src/02_pages",
+        //   "03_widgets": "./src/03_widgets",
+        //   "04_features": "./src/04_features",
+        //   "05_entities": "./src/05_entities",
+        //   "06_shared": "./src/06_shared"
+        // }
       }
     ]
   ]

@@ -49,4 +49,11 @@ export default [
       'prettier/prettier': ['error', { singleQuote: true }], // Правило Prettier для согласованности
     },
   },
+  {
+    files: ['**/*.test.{ts,tsx}', '**/*.spec.{ts,tsx}'],
+    rules: {
+      'i18next/no-literal-string': 'off', // Отключаем проверку строковых литералов в тестах
+      'import/no-unresolved': 'off',
+    },
+  },
 ];

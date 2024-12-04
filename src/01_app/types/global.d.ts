@@ -1,13 +1,13 @@
 import React from 'react';
 
-// declare module '*.module.scss' {
-//   const classes: { [key: string]: string };
-//   export = classes;
-// }
 declare module '*.module.scss' {
   const classes: { [key: string]: string };
-  export default classes;
+  export = classes;
 }
+// declare module '*.module.scss' {
+//   const classes: { [key: string]: string };
+//   export default classes;
+// }
 
 declare module '*.png';
 declare module '*.jpg';
