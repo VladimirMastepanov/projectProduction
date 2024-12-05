@@ -1,16 +1,18 @@
-@use "reset.scss";
-@use "variables/global.scss";
-@use "themes/normal.scss";
-@use "themes/dark.scss";
+@use 'reset.scss';
+@use 'variables/global.scss';
+@use 'themes/normal.scss';
+@use 'themes/dark.scss';
 
 :global {
-  .app {
+  body {
     font: var(--font-m);
 
-    background: var(--bg-color);
     color: var(--primary-color);
-
+  }
+  .app {
     min-height: 100vh;
+        background: var(--bg-color);
+
   }
 
   .content-page {

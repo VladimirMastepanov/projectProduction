@@ -4,8 +4,8 @@ import { createRoot } from "react-dom/client";
 import App from "./01_app/App";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "01_app/providers/ThemeProvider";
-
 import { ErrorBoundary } from "01_app/providers/ErrorBoundary";
+import '01_app/styles/index.scss';
 
 const rootElement = document.getElementById("root");
 if (!rootElement) {
