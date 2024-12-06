@@ -50,6 +50,7 @@ export default [
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'error',
       code: 120,
+      'no-param-reassign': 'off',
     },
   },
   {

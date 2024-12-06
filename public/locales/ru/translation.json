@@ -10,5 +10,7 @@
   "something went wrong": "Что-то пошло не так.",
   "reload page": "Обновить страницу",
   "throw error": "выбросить ошибку",
-  "short lang": "Ру"
+  "short lang": "Ру",
+  "increment": "увеличить",
+  "decrement": "уменьшить"
 }

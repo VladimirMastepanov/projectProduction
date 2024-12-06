@@ -100,11 +100,13 @@
     "webpack-dev-server": "^5.1.0"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.4.0",
     "i18next": "^24.0.2",
     "i18next-browser-languagedetector": "^8.0.0",
     "i18next-http-backend": "^3.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-redux": "^9.1.2",
     "react-router-dom": "^7.0.1"
   },
   "eslintConfig": {
