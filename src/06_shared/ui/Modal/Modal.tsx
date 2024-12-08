@@ -3,6 +3,7 @@ import { classNames } from '06_shared/lib/classNames/classNames';
 import cls from './Modal.module.scss';
 import { useTranslation } from 'react-i18next';
 import { Portal } from '../Portal/Portal';
+import { useTheme } from '01_app/providers/ThemeProvider';
 
 interface ModalProps {
   className?: string;
@@ -18,6 +19,7 @@ export const Modal = (props: ModalProps) => {
 
   const [isClosing, setIsClosing] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const { theme } = useTheme();
 
   const closeHandler = useCallback(() => {
     if(onClose) {

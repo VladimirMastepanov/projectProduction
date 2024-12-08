@@ -14,3 +14,7 @@ test:
 			npm run test:unit
 book:
 			npm run storybook
+json-server:
+			npx json-server json-server/db.json
+server:
+			npm run start:dev:server
