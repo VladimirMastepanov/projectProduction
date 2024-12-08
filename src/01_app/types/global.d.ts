@@ -21,7 +21,12 @@ declare module "*.svg" {
   export default content;
 }
 
-declare const __IS_DEV__: boolean;
+declare global {
+  const __IS_DEV__: boolean;
+}
+// export {}
+
+// declare const __IS_DEV__: boolean;
 
 declare global {
   namespace JSX {

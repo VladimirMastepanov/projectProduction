@@ -17,6 +17,7 @@
       "*": ["./src/*"]
       // "*.svg": ["./src/*"],
     },
+    "skipLibCheck": true,
     // allow... позволяет использовать дефолтные импорты, даже если библиотека такого не имеет
     "allowSyntheticDefaultImports": true,
     // esModuleInterop позволяет работать с пакетами, которые используют
