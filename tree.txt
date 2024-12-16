@@ -1,0 +1,229 @@
+
+├── babel.config.json
+├── config
+│   ├── build
+│   │   ├── buildDevServer.ts
+│   │   ├── buildLoaders.ts
+│   │   ├── buildPlugins.ts
+│   │   ├── buildResolvers.ts
+│   │   ├── buildWebpackConfig.ts
+│   │   ├── loaders
+│   │   │   └── buildCssLoader.ts
+│   │   └── types
+│   │       └── config.ts
+│   ├── eslint
+│   ├── jest
+│   │   ├── jest.config.ts
+│   │   ├── jestEmptyComponent.tsx
+│   │   └── setupTest.ts
+│   └── storybook
+│       ├── main.ts
+│       ├── preview-head.html
+│       └── preview.tsx
+├── eslint.config.mjs
+├── json-server
+│   ├── db.json
+│   └── index.js
+├── package-lock.json
+├── package.json
+├── public
+│   ├── index.html
+│   └── locales
+│       ├── en
+│       │   └── translation.json
+│       └── ru
+│           └── translation.json
+├── src
+│   ├── 01_app
+│   │   ├── App.tsx
+│   │   ├── providers
+│   │   │   ├── ErrorBoundary
+│   │   │   │   ├── index.ts
+│   │   │   │   └── ui
+│   │   │   │       ├── BugButton.tsx
+│   │   │   │       └── ErrorBoundary.tsx
+│   │   │   ├── StoreProvider
+│   │   │   │   ├── config
+│   │   │   │   │   ├── StateSchema.ts
+│   │   │   │   │   └── store.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── ui
+│   │   │   │       └── StoreProvider.tsx
+│   │   │   ├── ThemeProvider
+│   │   │   │   ├── index.tsx
+│   │   │   │   ├── lib
+│   │   │   │   │   ├── ThemeContext.tsx
+│   │   │   │   │   └── useThem.tsx
+│   │   │   │   └── ui
+│   │   │   │       └── ThemeProvider.tsx
+│   │   │   └── router
+│   │   │       ├── index.ts
+│   │   │       └── ui
+│   │   │           └── AppRouter.tsx
+│   │   ├── styles
+│   │   │   ├── index.scss
+│   │   │   ├── reset.scss
+│   │   │   ├── themes
+│   │   │   │   ├── dark.scss
+│   │   │   │   └── normal.scss
+│   │   │   └── variables
+│   │   │       └── global.scss
+│   │   └── types
+│   │       └── global.d.ts
+│   ├── 02_pages
+│   │   ├── AboutPage
+│   │   │   ├── index.tsx
+│   │   │   └── ui
+│   │   │       ├── AboutPage.async.tsx
+│   │   │       ├── AboutPage.stories.tsx
+│   │   │       └── AboutPage.tsx
+│   │   ├── MainPage
+│   │   │   ├── index.tsx
+│   │   │   └── ui
+│   │   │       ├── MainPage.async.tsx
+│   │   │       ├── MainPage.stories.tsx
+│   │   │       └── MainPage.tsx
+│   │   └── NotFoundPage
+│   │       ├── index.tsx
+│   │       └── ui
+│   │           ├── NotFoundPage.module.scss
+│   │           ├── NotFoundPage.stories.tsx
+│   │           └── NotFoundPage.tsx
+│   ├── 03_widgets
+│   │   ├── ErrorPage
+│   │   │   ├── index.ts
+│   │   │   └── ui
+│   │   │       ├── ErrorPage.module.scss
+│   │   │       ├── ErrorPage.stories.tsx
+│   │   │       └── ErrorPage.tsx
+│   │   ├── Navbar
+│   │   │   ├── index.ts
+│   │   │   └── ui
+│   │   │       ├── Navbar.module.scss
+│   │   │       ├── Navbar.stories.tsx
+│   │   │       └── Navbar.tsx
+│   │   ├── PageLoader
+│   │   │   ├── index.ts
+│   │   │   └── ui
+│   │   │       ├── PageLoader.module.scss
+│   │   │       └── PageLoader.tsx
+│   │   └── Sidebar
+│   │       ├── index.ts
+│   │       └── ui
+│   │           └── Sidebar
+│   │               ├── Sidebar.module.scss
+│   │               ├── Sidebar.stories.tsx
+│   │               ├── Sidebar.test.tsx
+│   │               └── Sidebar.tsx
+│   ├── 04_features
+│   │   └── AuthByUsername
+│   │       ├── index.ts
+│   │       └── ui
+│   │           ├── LoginForm
+│   │           │   ├── LoginForm.module.scss
+│   │           │   ├── LoginForm.stories.tsx
+│   │           │   └── LoginForm.tsx
+│   │           └── LoginModal
+│   │               ├── LoginModal.module.scss
+│   │               └── LoginModal.tsx
+│   ├── 05_entities
+│   │   ├── Counter
+│   │   │   ├── index.ts
+│   │   │   ├── model
+│   │   │   │   ├── selectors
+│   │   │   │   │   ├── getCounter
+│   │   │   │   │   │   ├── getCounter.test.ts
+│   │   │   │   │   │   └── getCounter.ts
+│   │   │   │   │   └── getCounterValue
+│   │   │   │   │       ├── getCounterValue.test.ts
+│   │   │   │   │       └── getCounterValue.ts
+│   │   │   │   ├── slice
+│   │   │   │   │   ├── counterSlice.ts
+│   │   │   │   │   └── counterSlise.test.ts
+│   │   │   │   └── types
+│   │   │   │       └── counterSchema.ts
+│   │   │   └── ui
+│   │   │       ├── Counter.test.tsx
+│   │   │       └── Counter.tsx
+│   │   └── User
+│   │       ├── index.ts
+│   │       ├── model
+│   │       │   ├── selectors
+│   │       │   ├── slice
+│   │       │   │   ├── userSlice.test.ts
+│   │       │   │   └── userSlice.ts
+│   │       │   └── types
+│   │       │       └── user.ts
+│   │       └── ui
+│   │           ├── User.test.tsx
+│   │           └── User.tsx
+│   ├── 06_shared
+│   │   ├── assets
+│   │   │   └── icons
+│   │   │       ├── AboutIcon.svg
+│   │   │       ├── DarkIcon.svg
+│   │   │       ├── LightIcon.svg
+│   │   │       ├── MainIcon.svg
+│   │   │       └── UserIcon.png
+│   │   ├── config
+│   │   │   ├── i18n
+│   │   │   │   ├── i18n.ts
+│   │   │   │   └── i18nextForTest.ts
+│   │   │   ├── routeConfig
+│   │   │   │   └── routeConfig.tsx
+│   │   │   └── storybook
+│   │   │       ├── RouterDecorator
+│   │   │       │   └── RouterDecorator.tsx
+│   │   │       ├── StyleDecorator
+│   │   │       │   └── StyleDecorator.tsx
+│   │   │       └── ThemeDecorator
+│   │   │           └── ThemeDecorator.tsx
+│   │   ├── lib
+│   │   │   ├── classNames
+│   │   │   │   ├── classNames.test.ts
+│   │   │   │   └── classNames.ts
+│   │   │   └── tests
+│   │   │       ├── componentRender
+│   │   │       │   └── componentRender.tsx
+│   │   │       └── renderWithTranslation
+│   │   │           └── renderWithTranslation.tsx
+│   │   └── ui
+│   │       ├── AppLink
+│   │       │   ├── AppLink.module.scss
+│   │       │   ├── AppLink.stories.tsx
+│   │       │   └── AppLink.tsx
+│   │       ├── Button
+│   │       │   ├── Button.module.scss
+│   │       │   ├── Button.stories.tsx
+│   │       │   ├── Button.test.tsx
+│   │       │   └── Button.tsx
+│   │       ├── Input
+│   │       │   ├── Input.module.scss
+│   │       │   ├── Input.stories.tsx
+│   │       │   └── Input.tsx
+│   │       ├── LangSwitcher
+│   │       │   ├── LangSwitcher
+│   │       │   │   ├── LangSwitcher.module.scss
+│   │       │   │   └── LangSwitcher.tsx
+│   │       │   └── index.ts
+│   │       ├── Loader
+│   │       │   ├── Loader.scss
+│   │       │   ├── Loader.stories.tsx
+│   │       │   └── Loader.tsx
+│   │       ├── Modal
+│   │       │   ├── Modal.module.scss
+│   │       │   ├── Modal.stories.tsx
+│   │       │   ├── Modal.test.tsx
+│   │       │   └── Modal.tsx
+│   │       ├── Portal
+│   │       │   └── Portal.tsx
+│   │       └── ThemeSwitcher
+│   │           ├── index.ts
+│   │           └── ui
+│   │               ├── ThemeSwitcher.module.scss
+│   │               ├── ThemeSwitcher.stories.tsx
+│   │               └── ThemeSwitcher.tsx
+│   └── index.tsx
+├── tree.txt
+├── tsconfig.json
+└── webpack.config.ts

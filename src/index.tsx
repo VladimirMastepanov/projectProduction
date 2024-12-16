@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from '01_app/providers/ThemeProvider';
 import { StoreProvider } from '01_app/providers/StoreProvider';
 import App from './01_app/App';
-import '01_app/styles/index.scss';
 import '06_shared/config/i18n/i18n';
 import { ErrorBoundary } from '01_app/providers/ErrorBoundary';
 

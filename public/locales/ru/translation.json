@@ -12,5 +12,8 @@
   "throw error": "выбросить ошибку",
   "short lang": "Ру",
   "increment": "увеличить",
-  "decrement": "уменьшить"
+  "decrement": "уменьшить",
+  "enter": "Войти",
+  "enter username": "Введите имя",
+  "enter password": "Введите пароль"
 }

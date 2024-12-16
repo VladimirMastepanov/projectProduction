@@ -3,9 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type { Config } from "jest";
-import path from "path";
-
+import type { Config } from 'jest';
+import path from 'path';
 
 const config: Config = {
   globals: {
@@ -14,31 +13,30 @@ const config: Config = {
 
   clearMocks: true,
   // testEnvironment: 'jsdom',
-  testEnvironment: "jest-environment-jsdom",
-  coveragePathIgnorePatterns: ["/node_modules/"],
-  moduleDirectories: ["node_modules"],
-  moduleFileExtensions: [
-    "js",
-    "mjs",
-    "cjs",
-    "jsx",
-    "ts",
-    "tsx",
-    "json",
-    "node",
-  ],
-  rootDir: "../../",
+  testEnvironment: 'jest-environment-jsdom',
+  coveragePathIgnorePatterns: ['/node_modules/'],
+  moduleDirectories: ['node_modules'],
+  moduleFileExtensions: ['js', 'mjs', 'cjs', 'jsx', 'ts', 'tsx', 'json', 'node'],
+  rootDir: '../../',
 
-  testMatch: ["<rootDir>/src/**/*(*.)@(spec|test).[tj]s?(x)"],
-  testPathIgnorePatterns: ["/node_modules/", "/dist/"],
-  setupFilesAfterEnv: ["<rootDir>config/jest/setupTest.ts"],
+  testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).[tj]s?(x)'],
+  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTest.ts'],
   moduleNameMapper: {
+    '^01_app/(.*)$': '<rootDir>/src/01_app/$1',
+    '^02_pages/(.*)$': '<rootDir>/src/02_pages/$1',
+    '^03_widgets/(.*)$': '<rootDir>/src/03_widgets/$1',
+    '^04_features/(.*)$': '<rootDir>/src/04_features/$1',
+    '^05_entities/(.*)$': '<rootDir>/src/05_entities/$1',
+    '^06_shared/(.*)$': '<rootDir>/src/06_shared/$1',
     // '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
     //   '<rootDir>/__mocks__/fileMock.js',
     // '\\.module\\.scss$': 'identity-obj-proxy',
-    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
-    "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    // '^(.*)$': '<rootDir>/src/$1',
   },
+
   // transform: {
   //   '^.+\\.(ts|tsx)$': 'ts-jest', // обработка TypeScript файлов с помощью ts-jest
   //   '^.+\\.scss$': 'jest-css-modules-transform', // для SCSS файлов (если используются модули стилей)

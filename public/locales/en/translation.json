@@ -12,5 +12,8 @@
   "throw error": "throw error",
   "short lang": "En",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "enter": "Enter",
+  "enter username": "Enter Username",
+  "enter password": "Enter Password"
 }

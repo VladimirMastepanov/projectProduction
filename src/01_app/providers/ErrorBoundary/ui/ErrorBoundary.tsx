@@ -1,6 +1,6 @@
-import { ErrorPage } from "03_widgets/ErrorPage";
-import { PageLoader } from "03_widgets/PageLoader";
-import React, { ReactNode, useState, useEffect, Suspense } from "react";
+import { ErrorPage } from '03_widgets/ErrorPage';
+import { PageLoader } from '03_widgets/PageLoader';
+import React, { ReactNode, useState, useEffect, Suspense } from 'react';
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -10,7 +10,7 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ children }) => {
   const [hasError, setHasError] = useState(false);
 
   const handleError = (error: Error) => {
-    console.error("Error caught in ErrorBoundary:", error);
+    console.error('Error caught in ErrorBoundary:', error);
     setHasError(true);
   };
 
@@ -27,10 +27,10 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ children }) => {
       handleError(error.error);
     };
 
-    window.addEventListener("error", errorHandler);
+    window.addEventListener('error', errorHandler);
 
     return () => {
-      window.removeEventListener("error", errorHandler);
+      window.removeEventListener('error', errorHandler);
     };
   }, []);
 

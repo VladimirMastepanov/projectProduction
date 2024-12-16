@@ -1,4 +1,3 @@
-import js from '@eslint/js';
 import globals from 'globals';
 import eslintReact from 'eslint-plugin-react';
 import eslintReactHooks from 'eslint-plugin-react-hooks';
@@ -36,20 +35,32 @@ export default [
       i18next: i18nextPlugin,
     },
     rules: {
-      ...eslintReact.configs.recommended.rules, // Рекомендации для React
-      ...eslintConfigPrettier.rules, // Конфигурация Prettier
-      ...tsPlugin.configs.recommended.rules, // Рекомендации для TypeScript
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
+      ...eslintReact.configs.recommended.rules,
+      ...eslintConfigPrettier.rules,
+      ...tsPlugin.configs.recommended.rules,
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      'prettier/prettier': [
+        'error',
+        {
+          singleQuote: true,
+          printWidth: 100,
+        },
       ],
-      'prettier/prettier': 'error', // Применение правил Prettier
-      ...i18nextPlugin.configs.recommended.rules,
-      quotes: ['error', 'single', { avoidEscape: true }], // Одинарные кавычки с исключением для избегания экранирования
-      'prettier/prettier': ['error', { singleQuote: true }], // Правило Prettier для согласованности
+      quotes: ['error', 'single', { avoidEscape: true }],
+      'max-len': [
+        'error',
+        {
+          code: 100,
+          ignoreComments: true,
+          ignoreTrailingComments: true,
+          ignoreUrls: true,
+          ignoreStrings: true,
+          ignoreTemplateLiterals: true,
+          ignoreRegExpLiterals: true,
+        },
+      ],
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'error',
-      code: 120,
       'no-param-reassign': 'off',
     },
   },
@@ -58,7 +69,9 @@ export default [
     rules: {
       'i18next/no-literal-string': 'off', // Отключаем проверку строковых литералов в тестах
       'import/no-unresolved': 'off',
-      code: 120,
     },
+  },
+  {
+    ignores: ['node_modules', 'dist', 'json-server/index.js'],
   },
 ];
