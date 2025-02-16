@@ -12,8 +12,6 @@ pre:
 			npx prettier . --write
 test:
 			npm run test:unit
-book:
-			npm run storybook
 json-server:
 			npx json-server json-server/db.json
 server:

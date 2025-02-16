@@ -34,6 +34,12 @@ export default [
       prettier: eslintPrettier,
       i18next: i18nextPlugin,
     },
+    extends: [
+      'eslint:recommended',
+      'plugin:react/recommended',
+      'plugin:@typescript-eslint/recommended',
+      'prettier', // Важно, чтобы 'prettier' шел последним
+    ],
     rules: {
       ...eslintReact.configs.recommended.rules,
       ...eslintConfigPrettier.rules,

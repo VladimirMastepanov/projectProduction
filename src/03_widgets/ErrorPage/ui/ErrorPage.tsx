@@ -1,6 +1,7 @@
 import React from 'react';
-import { classNames } from '06_shared/lib/classNames/classNames';
 import cls from './ErrorPage.module.scss';
+import { classNames } from '06_shared/lib/classNames/classNames';
+
 import { useTranslation } from 'react-i18next';
 import { Button } from '06_shared/ui/Button/Button';
 
